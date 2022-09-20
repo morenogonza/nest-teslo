@@ -151,7 +151,7 @@ export class ProductsService {
     const query = this.productRespository.createQueryBuilder('product');
 
     try {
-      await query.delete().where({}).execute();
+      return await query.delete().where({}).execute();
     } catch (error) {
       this.handleDBExceptions(error);
     }
